@@ -4,7 +4,7 @@ import { Form, Button, Input } from 'antd';
 
 const FormItem = Form.Item;
 
-const BasicQuestionsForm = (props) => {
+const BasicQuestionsForm = props => {
   const { onBasicFormSubmit, form } = props;
   const { getFieldDecorator, validateFields } = form;
 
@@ -66,7 +66,7 @@ const BasicQuestionsForm = (props) => {
               block
             >
               Continue
-          </Button>
+            </Button>
           </FormItem>
         </Form>
       </div>
