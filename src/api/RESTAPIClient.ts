@@ -1,4 +1,4 @@
-const submitBasicQuestionsResponse = async (
+export const submitBasicQuestionsResponse = async (
   userId: string,
   firstName: string,
   lastName: string,
@@ -19,7 +19,7 @@ const submitBasicQuestionsResponse = async (
   });
 };
 
-const submitExperienceQuestionsResponse = async (
+export const submitExperienceQuestionsResponse = async (
   userId: string,
   college: string,
   lastCompany: string,
@@ -38,7 +38,7 @@ const submitExperienceQuestionsResponse = async (
   });
 };
 
-const submitShortResponseQuestion = async (
+export const submitShortResponseQuestion = async (
   userId: string,
   response: string
 ) => {
@@ -53,8 +53,8 @@ const submitShortResponseQuestion = async (
   });
 };
 
-module.exports = {
-  submitBasicQuestionsResponse,
-  submitExperienceQuestionsResponse,
-  submitShortResponseQuestion
-};
+// module.exports = {
+//   submitBasicQuestionsResponse,
+//   submitExperienceQuestionsResponse,
+//   submitShortResponseQuestion
+// };
