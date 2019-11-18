@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShortResponseQuestionScreen = () => {
+const ShortResponseQuestionForm = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const ShortResponseQuestionScreen = () => {
   )
 }
 
-export default ShortResponseQuestionScreen;
+export default ShortResponseQuestionForm;

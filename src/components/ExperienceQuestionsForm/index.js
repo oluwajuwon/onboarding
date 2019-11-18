@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExperienceQuestionsScreen = () => {
+const ExperienceQuestionsForm = () => {
 
   return (
     <div>
@@ -9,4 +9,4 @@ const ExperienceQuestionsScreen = () => {
   )
 }
 
-export default ExperienceQuestionsScreen
+export default ExperienceQuestionsForm
