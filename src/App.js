@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header';
 import WelcomeScreen from './components/WelcomeScreen';
-import BasicQuestionsScreen from './components/BasicQuestionsScreen';
+import OnboardingScreen from './components/OnboardingScreen';
 
 const App = () => {
   return (
@@ -10,7 +10,7 @@ const App = () => {
       <Header />
       <Switch>
         <Route exact path='/' component={WelcomeScreen} />
-        <Route path='/onboarding' component={BasicQuestionsScreen} />
+        <Route path='/onboarding' component={OnboardingScreen} />
       </Switch>
     </React.Fragment>
   );
