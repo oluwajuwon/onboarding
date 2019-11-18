@@ -34,28 +34,33 @@ const OnboardingScreen = () => {
     }
   }
 
-  const handleExperienceFormSubmit = async () => {
+  const handleExperienceFormSubmit = async (userResponse) => {
     try {
       setShowExperienceQuestions(false);
       setShowShortResponseQuestions(true);
     }catch (error) {
     }
-      
   }
 
   const handleShortResponseFormSubmit = async () => {
     try {
 
     }catch (error) {
+
     }
-      
   }
 
   return (
     <React.Fragment>
-      {showBasicQuestions && <BasicQuestionsForm onBasicFormSubmit={userResponse => handleBasicFormSubmit(userResponse)} />}
-      {showExperienceQuestions && <ExperienceQuestionsForm onExperienceFormSubmit={handleExperienceFormSubmit} />}
-      {showShortResponseQuestions && <ShortResponseQuestionForm onShortResponseFormSubmit={handleShortResponseFormSubmit}/>}
+      {showBasicQuestions &&
+        <BasicQuestionsForm onBasicFormSubmit={userResponse => handleBasicFormSubmit(userResponse)} />}
+
+      {showExperienceQuestions &&
+        <ExperienceQuestionsForm onExperienceFormSubmit={userResponse => handleExperienceFormSubmit(userResponse)} />}
+
+      {showShortResponseQuestions &&
+        <ShortResponseQuestionForm onShortResponseFormSubmit={userResponse => handleShortResponseFormSubmit(userResponse)}/>}
+
     </React.Fragment>
   )
 }
