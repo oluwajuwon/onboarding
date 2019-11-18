@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom'
+import Header from './components/Header';
+import WelcomeScreen from './components/WelcomeScreen';
+import BasicQuestionsScreen from './components/BasicQuestionsScreen';
+import ExperienceQuestionsScreen from './components/ExperienceQuestionsScreen';
+import ShortResponseQuestionScreen from './components/ShortResponseQuestionScreen';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={WelcomeScreen} />
+        <Route path='/onboarding/basic' component={BasicQuestionsScreen} />
+        <Route path='/onboarding/experience' component={ExperienceQuestionsScreen} />
+        <Route path='/onboarding/short-response' component={ShortResponseQuestionScreen} />
+      </Switch>
+    </React.Fragment>
   );
 }
 
