@@ -1,8 +1,8 @@
 import React from 'react';
-import './style.css';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Typography } from 'antd';
 
 const FormItem = Form.Item;
+const { Title } = Typography;
 
 const ExperienceQuestionsForm = props => {
   const { onExperienceFormSubmit, form } = props;
@@ -19,34 +19,31 @@ const ExperienceQuestionsForm = props => {
       <div className="form-container">
 
         <div className="form-header">
-          <h1 className="form-title">User Onboarding</h1>
-          <h4 className="form-subtitle">Part 2/3 - Experience Questions </h4>
+          <Title className="form-title">User Onboarding</Title>
+          <Title level={3} className="form-subtitle">Part 2/3 - Experience Questions </Title>
         </div>
 
         <Form onSubmit={event => handleSubmit(event)} className="main-form">
 
           <FormItem label="Which College did you go to?">
             {getFieldDecorator('college', {
-              rules: [{ required: true, message: 'Please input your username!' }],
-            })(<Input
-              type="Email"
-              className="textbox"
-            />)}
+              rules: [{ required: true, message: 'Please enter your college!' }],
+            })(<Input className="textbox" />)}
           </FormItem>
 
           <FormItem label="What was the last company you worked at?">
             {getFieldDecorator('lastCompany', {
-              rules: [{ required: true, message: 'Please input your username!' }],
+              rules: [{ required: true, message: 'Please add a company name!' }],
             })(<Input className="textbox" />)}
           </FormItem>
 
           <FormItem label="How many years of experience do you have?">
             {getFieldDecorator('numYearsExperience', {
-              rules: [{ required: true, message: 'Please input your username!' }],
+              rules: [{ required: true, message: 'Please add your years of experience!' }],
             })(<Input className="textbox" />)}
           </FormItem>
 
-          <FormItem>
+          <FormItem className="btn-div">
             <Button
               type="primary"
               htmlType="submit"
