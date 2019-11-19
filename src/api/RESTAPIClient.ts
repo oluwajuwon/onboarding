@@ -52,9 +52,3 @@ export const submitShortResponseQuestion = async (
     });
   });
 };
-
-// module.exports = {
-//   submitBasicQuestionsResponse,
-//   submitExperienceQuestionsResponse,
-//   submitShortResponseQuestion
-// };

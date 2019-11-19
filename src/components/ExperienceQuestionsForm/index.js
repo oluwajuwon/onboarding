@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import { Form, Button, Input } from 'antd';
 
 const FormItem = Form.Item;
@@ -27,26 +26,23 @@ const ExperienceQuestionsForm = props => {
 
           <FormItem label="Which College did you go to?">
             {getFieldDecorator('college', {
-              rules: [{ required: true, message: 'Please input your username!' }],
-            })(<Input
-              type="Email"
-              className="textbox"
-            />)}
+              rules: [{ required: true, message: 'Please enter your college!' }],
+            })(<Input className="textbox" />)}
           </FormItem>
 
           <FormItem label="What was the last company you worked at?">
             {getFieldDecorator('lastCompany', {
-              rules: [{ required: true, message: 'Please input your username!' }],
+              rules: [{ required: true, message: 'Please add a company name!' }],
             })(<Input className="textbox" />)}
           </FormItem>
 
           <FormItem label="How many years of experience do you have?">
             {getFieldDecorator('numYearsExperience', {
-              rules: [{ required: true, message: 'Please input your username!' }],
+              rules: [{ required: true, message: 'Please add your years of experience!' }],
             })(<Input className="textbox" />)}
           </FormItem>
 
-          <FormItem>
+          <FormItem className="btn-div">
             <Button
               type="primary"
               htmlType="submit"
