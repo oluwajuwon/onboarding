@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Icon } from 'antd';
+import { Button, Icon, Typography } from 'antd';
+
+const { Text, Title } = Typography;
 
 const WelcomeScreen = () => {
 
@@ -19,7 +21,7 @@ const WelcomeScreen = () => {
   return (
     <React.Fragment>
       <div className="welcome-screen">
-        Welcome to my Onboarding code challenge
+        <Title level={3}>Welcome to my Onboarding code challenge</Title>
         <Link to="/onboarding">
           <Button type="primary">
             Start onboarding
@@ -30,7 +32,7 @@ const WelcomeScreen = () => {
 
       {showFooterMessage && 
         <div className="footer-message">
-          visit my github <a href="https://github.com/oluwajuwon" target="_blank" rel="noopener noreferrer">here</a>
+          <Text>visit my github <a href="https://github.com/oluwajuwon" target="_blank" rel="noopener noreferrer">here</a></Text>
         </div>
       }
     </React.Fragment>

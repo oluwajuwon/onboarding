@@ -1,10 +1,13 @@
 import React from 'react';
+import { Typography } from 'antd';
+
+const { Title } = Typography;
 
 const Header = () => {
 
   return (
     <header>
-      <h2>Onboarding</h2>
+      <Title level={2}>Onboarding</Title>
     </header>
   )
 }

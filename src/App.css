@@ -19,6 +19,11 @@ header {
   text-align: center;
 }
 
+.welcome-screen {
+  font-weight: 200;
+  color: #585f66e6 ;
+}
+
 .not-found {
   font-size: xx-large;
   margin-left: auto;
@@ -30,7 +35,7 @@ header {
 
 .not-found button {
   width: 40%;
-  height: 40px;
+  height: 45px;
   border-radius: 20px;
   color: #ffffff;
   font-size: medium;
@@ -61,7 +66,7 @@ header {
 }
 
 .form-subtitle {
-  font-weight: 200;
+  font-weight: 300;
   color: #9da7afe6 ;
 }
 
@@ -69,7 +74,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   width:100%;
-  padding: 20px
+  padding: 25px
 }
 
 .ant-form-item {
@@ -99,9 +104,9 @@ header {
   border: 1px solid #ebeefb;
   border-radius: 4px;
   font-size: 18px;
-  height: 20px;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
+  color: #7c8094;
 }
 
 .textarea {
@@ -119,10 +124,11 @@ header {
 
 .form-container button, .success-section button, .welcome-screen button {
   width: 100%;
-  height: 40px;
+  height: 45px;
   border-radius: 20px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 20px;
   color: #ffffff;
   font-size: medium;
   border: 0;

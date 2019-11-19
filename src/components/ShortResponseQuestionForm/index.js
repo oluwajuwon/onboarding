@@ -1,6 +1,7 @@
 import React from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Typography } from 'antd';
 
+const { Title } = Typography;
 const FormItem = Form.Item;
 
 const ShortResponseQuestionForm = props => {
@@ -19,8 +20,8 @@ const ShortResponseQuestionForm = props => {
       <div className="form-container">
 
         <div className="form-header">
-          <h1 className="form-title">User Onboarding</h1>
-          <h4 className="form-subtitle">Part 3/3 - Short Response Question</h4>
+          <Title className="form-title">User Onboarding</Title>
+          <Title level={3} className="form-subtitle">Part 3/3 - Short Response Question</Title>
         </div>
 
         <Form onSubmit={event => handleSubmit(event)} className="main-form">

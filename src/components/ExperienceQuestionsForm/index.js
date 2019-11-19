@@ -1,7 +1,8 @@
 import React from 'react';
-import { Form, Button, Input } from 'antd';
+import { Form, Button, Input, Typography } from 'antd';
 
 const FormItem = Form.Item;
+const { Title } = Typography;
 
 const ExperienceQuestionsForm = props => {
   const { onExperienceFormSubmit, form } = props;
@@ -18,8 +19,8 @@ const ExperienceQuestionsForm = props => {
       <div className="form-container">
 
         <div className="form-header">
-          <h1 className="form-title">User Onboarding</h1>
-          <h4 className="form-subtitle">Part 2/3 - Experience Questions </h4>
+          <Title className="form-title">User Onboarding</Title>
+          <Title level={3} className="form-subtitle">Part 2/3 - Experience Questions </Title>
         </div>
 
         <Form onSubmit={event => handleSubmit(event)} className="main-form">
