@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Alert } from 'antd';
 import {
   submitBasicQuestionsResponse,
   submitExperienceQuestionsResponse,
@@ -36,42 +37,46 @@ const OnboardingScreen = () => {
     const { firstName, lastName, email, phoneNumber } = userResponse;
 
     try {
-      const response = await submitBasicQuestionsResponse(userId, firstName, lastName, email, phoneNumber)
+      const response = await submitBasicQuestionsResponse(userId, firstName, lastName, email, phoneNumber);
 
-      setShowBasicQuestions(false)
+      setShowBasicQuestions(false);
       setShowExperienceQuestions(true);
-      setUserBasicResponse(response.savedResponse)
-    }catch (error) {
+      setUserBasicResponse(response.savedResponse);
 
+    } catch (error) {
+      return <Alert message={error.message} type="error" />
     }
   }
 
   const handleExperienceFormSubmit = async (userResponse) => {
     const userId = incrementUserId;
-    const { college, lastCompany, numYearsExperience } = userResponse
+    const { college, lastCompany, numYearsExperience } = userResponse;
 
     try {
-      const response = await submitExperienceQuestionsResponse(userId, college, lastCompany, numYearsExperience)
+      const response = await submitExperienceQuestionsResponse(userId, college, lastCompany, numYearsExperience);
 
       setShowExperienceQuestions(false);
       setShowShortResponseQuestions(true);
       setUserExperienceResponse(response.savedResponse);
-    }catch (error) {
+
+    } catch (error) {
+      return <Alert message={error.message} type="error" />
     }
   }
 
   const handleShortResponseFormSubmit = async (userResponse) => {
     const userId = incrementUserId;
-    const { response } = userResponse
-    try {
+    const { response } = userResponse;
 
-      const apiResponse = await submitShortResponseQuestion(userId, response)
+    try {
+      const apiResponse = await submitShortResponseQuestion(userId, response);
 
       setShowShortResponseQuestions(false);
       setShowSuccessResponse(true);
       setUserShortResponse(apiResponse.savedResponse);
-    }catch (error) {
 
+    } catch (error) {
+      return <Alert message={error.message} type="error" />
     }
   }
 
