@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Input, Typography } from 'antd';
+import { Form, Button, Input, Typography, Row, Col } from 'antd';
 
 const FormItem = Form.Item;
 const { Title } = Typography;
@@ -18,29 +18,34 @@ const BasicQuestionsForm = props => {
   return (
     <React.Fragment>
 
-      <div className="form-container">
-        <div className="form-header">
+      <Row className="form-container">
+        <Row className="form-header">
         <Title className="form-title">User Onboarding</Title>
           <Title level={3} className="form-subtitle">Part 1/3 - Basic Questions </Title>
-        </div>
+        </Row>
         <Form onSubmit={event => handleSubmit(event)}>
 
-          <div className="name-fields">
+          <Row type="flex" justify="space-between">
 
-            <FormItem label="First Name" className="first-name">
+          <Col span={6}>
+          <FormItem label="First Name" className="first-name">
               {getFieldDecorator('firstName', {
                 rules: [{ required: true, message: 'Please enter your first name!' }],
               })(<Input className="textbox" />)
               }
             </FormItem>
-
-            <FormItem label="Last Name" className="last-name">
+          </Col>
+            
+          <Col span={6}>
+          <FormItem label="Last Name" className="last-name">
               {getFieldDecorator('lastName', {
                 rules: [{ required: true, message: 'Please enter your last name!' }],
               })(<Input className="textbox" />)}
             </FormItem>
+          </Col>
+            
 
-          </div>
+          </Row>
 
 
           <FormItem label="Email">
@@ -69,7 +74,7 @@ const BasicQuestionsForm = props => {
             </Button>
           </FormItem>
         </Form>
-      </div>
+      </Row>
 
     </React.Fragment>
   )

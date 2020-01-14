@@ -147,9 +147,8 @@ header {
 }
 
 .footer-message {
-  background-color: #f0445b;
   padding: 15px;
-  color: white;
+  color: #111;
   width: 15%;
   text-align: center;
   margin-left: auto;
