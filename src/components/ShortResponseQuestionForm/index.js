@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Button, Input, Typography } from 'antd';
+import { Form, Button, Input, Typography, Row, Col } from 'antd';
 
 const { Title } = Typography;
 const FormItem = Form.Item;
@@ -17,12 +17,12 @@ const ShortResponseQuestionForm = props => {
 
   return (
     <React.Fragment>
-      <div className="form-container">
+      <Row className="form-container">
 
-        <div className="form-header">
+        <Row className="form-header">
           <Title className="form-title">User Onboarding</Title>
           <Title level={3} className="form-subtitle">Part 3/3 - Short Response Question</Title>
-        </div>
+        </Row>
 
         <Form onSubmit={event => handleSubmit(event)} className="main-form">
 
@@ -47,7 +47,7 @@ const ShortResponseQuestionForm = props => {
             </FormItem>
 
         </Form>
-      </div>
+      </Row>
     </React.Fragment>
   )
 }

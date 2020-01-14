@@ -21,7 +21,7 @@ const WelcomeScreen = () => {
   return (
     <React.Fragment>
       <div className="welcome-screen">
-        <Title level={3}>Welcome to my Onboarding code challenge</Title>
+        <Title level={3}>Welcome to the onboarding</Title>
         <Link to="/onboarding">
           <Button type="primary">
             Start onboarding
